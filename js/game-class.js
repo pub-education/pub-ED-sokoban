@@ -64,4 +64,12 @@ class GameClass {
 
         Player.move(position, tmpPos[0] + ":" + tmpPos[1], nextPos[0] + ":" + nextPos[1], boxType, nextBoxType);
     }
+
+    gameEnd() {
+        Helper.setValue("gameMoves", Current.moves.toString() + " moves.");
+        let xTime = Current.end - Current.start;
+        let min = Math.floor(xTime / 60000);
+        let sek = Math.round((xTime / 60000 - min) * 60, 2);
+        Helper.setValue("gameTime", min.toString() + "min and " + sek.toString() + "sek");
+    }
 }

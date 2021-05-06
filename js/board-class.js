@@ -4,15 +4,16 @@ class BoardClass {
     constructor() { }
 
     createBoard(boardNo) {
-        boardNo++;
+
         let playerStartLocation = "";
         let rows, columns, html;
         let targetCounter = 0;
-        if (boardNo > mapsArray.length) {
+        Target = [];
+        if (!(boardNo < mapsArray.length)) {
             console.log(`Requested board number ${boardNo.toString()} is greater than availabel number of boards "${mapsArray.length}".`);
         }
         else {
-            rows = mapsArray[boardNo - 1].mapGrid;
+            rows = mapsArray[boardNo].mapGrid;
             //console.log(`createBoard1 rows=${rows}, rows.length=${rows.length}`);
             html = "";
             for (let i = 0; i < rows.length; i++) {
@@ -58,4 +59,18 @@ class BoardClass {
         let elem = document.getElementById(position);
         return elem.querySelector('img').attributes["class"].value;
     }
+
+    getNumberOfRemainingTargets() {
+        let tmp = document.getElementsByTagName("img");
+        let counter = Target.length;
+
+        for (let i = 0; i < Target.length; i++) {
+            if (document.getElementById(Target[i]).querySelector("img").getAttribute("class") == "box-square") {
+                counter--;
+            }
+        }
+        return counter;
+    }
+
+
 }

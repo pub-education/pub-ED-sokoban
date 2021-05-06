@@ -13,17 +13,17 @@ class PlayerClass {
         return this._location;
     }
 
-    playerMove(direction) {
-        if (direction == "up" && Game.canMove(direction)) {
-
-        }
-    }
     move(originBoxId, targetBoxId, afterTargetBoxId, targetBoxType, afterTargetBoxType) {
         let origin = document.getElementById(originBoxId);
         let target = document.getElementById(targetBoxId);
         let afterTarget = document.getElementById(afterTargetBoxId);
         let tmpBox, base = "/images/";
         let ok = false;
+
+        if (Current.moves == 0) {
+            Current.start = Date.now();
+        }
+        Current.moves++;
 
         //console.log(`1 targetBoxType: ${targetBoxType}, afterTargetBoxType: ${afterTargetBoxType}`);
 
@@ -68,5 +68,9 @@ class PlayerClass {
             ok = false;
         }
         if (ok) this._location = targetBoxId;
+        if (Board.getNumberOfRemainingTargets() == 0) {
+            Current.end = Date.now();
+            Game.gameEnd();
+        }
     }
 }

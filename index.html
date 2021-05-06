@@ -19,8 +19,26 @@
 <body>
     <div class="page-wrapper">
         <div class="page-content">
+            <header>
+                <h1>Sokoban - Chris's version</h1>
+            </header>
             <div id="game-content" class="game-board">
             </div>
+            <div id="game-results" class="game-results">
+                <div>
+                    <label for="gameTime">Time:
+                        <br />
+                        <input id="gameTime" type="text" />
+                    </label>
+                    <br />
+                    <label for="gameMoves">Number of moves:
+                        <br />
+                        <input id="gameMoves" type="text" />
+                    </label>
+                </div>
+                <div id="select-box" class="select-box"></div>
+            </div>
+
         </div>
         <footer>
             <div>
@@ -36,7 +54,7 @@
         const Board = new BoardClass();
 
         document.addEventListener("DOMContentLoaded", () => {
-            init();
+            init(0);
         });
     </script>
 </body>

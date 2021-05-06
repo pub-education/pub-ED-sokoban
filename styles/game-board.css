@@ -16,3 +16,16 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.game-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.game-results div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

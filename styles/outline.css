@@ -30,3 +30,8 @@ body {
     align-items: center;
     background-color: transparent;
 }
+
+.page-content header {
+    margin-top: 2rem;
+    color: val(--header-1-color);
+}
