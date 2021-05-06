@@ -1,0 +1,32 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+}
+
+
+
+.page-wrapper {
+    /*important to footer placement*/
+    position: relative;
+    top: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.page-content {
+    height: calc(100% - 70px);
+    width: 100%;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+}

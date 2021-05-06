@@ -1,0 +1,23 @@
+:root {
+    /* **** Document Colors **** */
+    --bg-color: #ffc048;
+    --text-color: #1e272e;
+    --header-1-color: #1e272e;
+    --header-2-color: #485460;
+    --card-bg-color: #3c40c6;
+    --card-text-color: #1e272e;
+    --card-header-1-color: #1e272e;
+    --card-header-2-color: #485460;
+    --nav-bg-color: transparent;
+    --nav-color: #1e272e;
+    --nav-item-bg-color: transparent;
+    --nav-item-color: #1e272e;
+    --nav-item-hover-bg-color: transparent;
+    --nav-item-hover-color: #1e272e;
+    --footer-bg-color: transparent;
+    --footer-color: #3c40c6;
+    --link-color: inherit;
+    --link-hover-color: inherit;
+    --shadow: #808e9b;
+    --hr-color: #485460;
+}

@@ -1,0 +1,72 @@
+
+
+class PlayerClass {
+    constructor() {
+        let _loaction = "";
+    }
+
+    setLocation(loc) {
+        this._location = loc;
+        //console.log(`PlayerClass setLocation loc="${loc}"`);
+    }
+    getLocation() {
+        return this._location;
+    }
+
+    playerMove(direction) {
+        if (direction == "up" && Game.canMove(direction)) {
+
+        }
+    }
+    move(originBoxId, targetBoxId, afterTargetBoxId, targetBoxType, afterTargetBoxType) {
+        let origin = document.getElementById(originBoxId);
+        let target = document.getElementById(targetBoxId);
+        let afterTarget = document.getElementById(afterTargetBoxId);
+        let tmpBox, base = "/images/";
+        let ok = false;
+
+        //console.log(`1 targetBoxType: ${targetBoxType}, afterTargetBoxType: ${afterTargetBoxType}`);
+
+        if (targetBoxType == "empty-square" || targetBoxType == "target-square") {
+            tmpBox = target.querySelector('img');
+            tmpBox.setAttribute('src', base + "player-box.gif");
+            tmpBox.setAttribute('class', "player-square");
+            if (Target.indexOf(originBoxId) < 0) {
+                tmpBox = origin.querySelector('img');
+                tmpBox.setAttribute('src', base + "board-box.gif");
+                tmpBox.setAttribute('class', "empty-square");
+            }
+            else {
+                tmpBox = origin.querySelector('img');
+                tmpBox.setAttribute('src', base + "target-box.gif");
+                tmpBox.setAttribute('class', "target-square");
+            }
+            ok = true;
+        }
+        else if (targetBoxType == "box-square" && (afterTargetBoxType == "empty-square" || afterTargetBoxType == "target-square")) {
+            //console.log(`2 targetBoxType: ${targetBoxType}, afterTargetBoxType: ${afterTargetBoxType}`);
+            tmpBox = target.querySelector('img');
+            tmpBox.setAttribute('src', base + "player-box.gif");
+            tmpBox.setAttribute('class', "player-square");
+            if (Target.indexOf(originBoxId) < 0) {
+                tmpBox = origin.querySelector('img');
+                tmpBox.setAttribute('src', base + "board-box.gif");
+                tmpBox.setAttribute('class', "empty-square");
+            }
+            else {
+                tmpBox = origin.querySelector('img');
+                tmpBox.setAttribute('src', base + "target-box.gif");
+                tmpBox.setAttribute('class', "target-square");
+            }
+
+            tmpBox = afterTarget.querySelector('img');
+            tmpBox.setAttribute('src', base + "move-box.gif");
+            tmpBox.setAttribute('class', "box-square");
+            ok = true;
+        }
+        else {
+            ok = false;
+        }
+        if (ok) this._location = targetBoxId;
+    }
+}

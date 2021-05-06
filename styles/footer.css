@@ -1,0 +1,17 @@
+/* This section containing .page_container, .page_wrap, and footer together with the html
+makes it possible to position the footer at the bottom of the screen or after page content. 
+Items marked as "important to footer placement" below are essential to make this work.*/
+
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    padding-top: 20px;
+    background-color: transparent;
+    text-align: center;
+    color: var(--footer-color);
+    font-size: 0.7rem;
+}

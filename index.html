@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/cj-icon_512x512.png" type="image/png" />
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css" />
+    <script src="/js/zz-settings.js"></script>
+    <script src="/js/helper-class.js"></script>
+    <script src="/js/game-class.js"></script>
+    <script src="/js/board-class.js"></script>
+    <script src="/js/player-class.js"></script>
+    <script src="/js/start.js"></script>
+    <title>Sokoban</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="page-content">
+            <div id="game-content" class="game-board">
+            </div>
+        </div>
+        <footer>
+            <div>
+                <p>Copyright &copy; 2021<br>Chris Johanneson</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var Current = {};
+        var Target = [];
+        const Game = new GameClass();
+        const Player = new PlayerClass();
+        const Board = new BoardClass();
+
+        document.addEventListener("DOMContentLoaded", () => {
+            init();
+        });
+    </script>
+</body>
+
+</html>
