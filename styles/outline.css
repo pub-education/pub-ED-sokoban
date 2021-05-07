@@ -11,10 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-
-
 .page-wrapper {
-    /*important to footer placement*/
     position: relative;
     top: 0px;
     left: 0px;

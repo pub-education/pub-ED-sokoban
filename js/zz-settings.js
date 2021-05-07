@@ -1,5 +1,6 @@
 
 /*   This is the base file for the Sokoban assignment - include this one in your HTML page, before you add the main script file*/
+// Updated array 1 & 3 (index 0 & 2)
 
 /*   Enum of CSS Classes for the static elements   */
 var Tiles = {

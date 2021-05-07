@@ -1,6 +1,7 @@
 
 
 class GameClass {
+    // I know constructor isn't necessary but I keep them there anyhow for convenience.
     constructor() { }
 
     init() {

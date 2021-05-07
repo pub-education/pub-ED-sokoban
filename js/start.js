@@ -1,6 +1,4 @@
-//import Game from '/js/game.js';
-//const game = require('/js/game.js');
-
+// **** Program Start ****
 function init(board) {
     createSelectBox();
     newGame(board);

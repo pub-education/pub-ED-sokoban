@@ -7,7 +7,6 @@ class PlayerClass {
 
     setLocation(loc) {
         this._location = loc;
-        //console.log(`PlayerClass setLocation loc="${loc}"`);
     }
     getLocation() {
         return this._location;
@@ -24,8 +23,6 @@ class PlayerClass {
             Current.start = Date.now();
         }
         Current.moves++;
-
-        //console.log(`1 targetBoxType: ${targetBoxType}, afterTargetBoxType: ${afterTargetBoxType}`);
 
         if (targetBoxType == "empty-square" || targetBoxType == "target-square") {
             tmpBox = target.querySelector('img');
@@ -44,7 +41,6 @@ class PlayerClass {
             ok = true;
         }
         else if (targetBoxType == "box-square" && (afterTargetBoxType == "empty-square" || afterTargetBoxType == "target-square")) {
-            //console.log(`2 targetBoxType: ${targetBoxType}, afterTargetBoxType: ${afterTargetBoxType}`);
             tmpBox = target.querySelector('img');
             tmpBox.setAttribute('src', base + "player-box.gif");
             tmpBox.setAttribute('class', "player-square");

@@ -1,6 +1,7 @@
 
 
 class BoardClass {
+    // I know constructor isn't necessary but I keep them there anyhow for convenience.
     constructor() { }
 
     createBoard(boardNo) {
@@ -14,14 +15,11 @@ class BoardClass {
         }
         else {
             rows = mapsArray[boardNo].mapGrid;
-            //console.log(`createBoard1 rows=${rows}, rows.length=${rows.length}`);
             html = "";
             for (let i = 0; i < rows.length; i++) {
                 columns = rows[i];
-                //console.log(`createBoard2 columns=${columns}`);
                 html += `<div class="row">`;
                 for (let j = 0; j < columns.length; j++) {
-                    //console.log(`createBoard3 switch square=${columns[j]}`);
                     html += `<div id="${i}:${j}" class="board-square column"><img class="`;
                     switch (columns[j].toString()) {
                         case ' ':
@@ -55,7 +53,6 @@ class BoardClass {
     }
 
     getBoxType(position) {
-        //console.log(`getBoxType in: ${position}`)
         let elem = document.getElementById(position);
         return elem.querySelector('img').attributes["class"].value;
     }
@@ -71,6 +68,4 @@ class BoardClass {
         }
         return counter;
     }
-
-
 }
