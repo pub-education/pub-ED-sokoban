@@ -8,6 +8,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 
@@ -16,6 +17,7 @@ body {
     /*important to footer placement*/
     position: relative;
     top: 0px;
+    left: 0px;
     min-height: 100%;
     width: 100%;
     background-color: var(--bg-main);

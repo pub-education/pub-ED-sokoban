@@ -6,6 +6,7 @@ class GameClass {
     init() {
         document.addEventListener('keydown', event => {
             //console.log(event.toString());
+            event.preventDefault();
             switch (event.code) {
                 case "ArrowDown":
                     Game.move('down');
