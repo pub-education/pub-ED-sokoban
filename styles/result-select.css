@@ -1,0 +1,55 @@
+.game-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.game-results div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.game-results input {
+    background-color: var(--result-bg-color);
+    color: var(--result-color);
+    border: 3px inset var(--result-border-color);
+}
+
+.game-result label {
+    color: var(--result-label-color);
+}
+
+#gameList,
+#gameList option {
+    background-color: var(--result-bg-color);
+    color: var(--result-color);
+    border: 3px groove var(--result-border-color);
+}
+
+
+.select-box {
+    min-height: 100%;
+    padding-top: 18px;
+}
+
+.select-restart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.select-restart button {
+    background-color: var(--result-bg-color);
+    color: var(--result-color);
+    border: 3px outset var(--result-border-color);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.select-restart button:active {
+    border: 3px inset var(--result-border-color);
+    padding-top: 1px;
+}

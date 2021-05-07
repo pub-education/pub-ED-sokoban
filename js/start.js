@@ -6,6 +6,7 @@ function init(board) {
 }
 
 function newGame(board) {
+    Current.boardNo = board;
     Player.setLocation(Board.createBoard(board));
     Helper.focus("game-content");
     Current.moves = 0;
@@ -15,15 +16,21 @@ function newGame(board) {
 
 function createSelectBox() {
 
-    let html = `<select id="gameList" onchange="javascrip: selectGame(this)">`;
+    let html = `<div class="select-restart">`;
+    html += `<button class="reset-button" onclick="javascript: resetGame()">Reset Game</button>`;
+    html += `<select id="gameList" onchange="javascrip: selectGame(this)">`;
     for (let i = 0; i < mapsArray.length; i++) {
         html += `<option value="${i}">Game ${i}</option>`;
     }
-    html += `</select>`;
+    html += `</select></div>`;
     Helper.setHtml("select-box", html);
 }
 
 function selectGame(board) {
     newGame(board.value);
     document.getElementById("gameList").blur();
+}
+
+function resetGame() {
+    newGame(Current.boardNo);
 }
