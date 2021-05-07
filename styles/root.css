@@ -20,4 +20,8 @@
     --link-hover-color: inherit;
     --shadow: #808e9b;
     --hr-color: #485460;
+    --result-bg-color: #f53b57;
+    --result-border-color: #ffa801;
+    --result-color: #d2dae2;
+    --result-label-color: #3c40c6;
 }

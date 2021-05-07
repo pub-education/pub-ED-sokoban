@@ -35,3 +35,14 @@ body {
     margin-top: 2rem;
     color: val(--header-1-color);
 }
+
+.page-content header p {
+    color: var(--result-bg-color);
+    font-style: italic;
+    text-align: center;
+}
+
+.page-content header p span {
+    font-weight: bolder;
+    text-decoration: underline;
+}

@@ -29,3 +29,20 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.game-results input {
+    background-color: var(--result-bg-color);
+    color: var(--result-color);
+    border: 3px inset var(--result-border-color);
+}
+
+.game-result label {
+    color: var(--result-label-color);
+}
+
+#gameList,
+#gameList option {
+    background-color: var(--result-bg-color);
+    color: var(--result-color);
+    border: 3px groove var(--result-border-color);
+}
