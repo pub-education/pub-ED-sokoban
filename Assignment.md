@@ -21,13 +21,6 @@ You are going to create a JavaScript game, based on the game called ‚ÄùSokoban‚Ä
 - The grid map must be made up of html elements created through JavaScript commands.
 - The player and blocks should also be represented as html elements, in the same way, and move from tile to tile by moving their elements into other tile elements.
 
-## Resources:
-
-- http://www.w3schools.com/js/
-- https://app.pluralsight.com/library/courses/javascript-getting-started/table-of-contents
-- http://sokoban.info/
-- https://app.pluralsight.com/library/courses/code-school-javascript-road-trip-part-1/recommended-courses
-
 ## Subjects Covered:
 
 - JavaScript interaction with HTML
