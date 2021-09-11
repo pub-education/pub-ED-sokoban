@@ -27,3 +27,5 @@ You are going to create a JavaScript game, based on the game called ‚ÄùSokoban‚Ä
 - Creating and modifying elements
 - Event listeners tied to the HTML document object model.
 - Making an interactive JavaScript / HTML application
+
+Working sample available at: https://sokoban.chrisjohannesson.com/
